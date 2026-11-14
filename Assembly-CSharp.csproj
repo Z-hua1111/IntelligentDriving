@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\RenderFunction\ParkingVisualManager.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\ObstacleBoundingBox.cs" />
     <Compile Include="Assets\Scripts\ObstacleVisualEnhancer.cs" />
+    <Compile Include="Assets\26Add\ParkCarLine.cs" />
     <Compile Include="Assets\Scripts\InfineRoad.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\AutoObstacleRequester.cs" />
     <Compile Include="Assets\Scripts\AdasManager.cs" />

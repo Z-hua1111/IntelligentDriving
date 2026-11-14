@@ -39,6 +39,14 @@ public class CarWASDControl : MonoBehaviour
     [Tooltip("低速下转向更灵敏的系数曲线（速度为 0 时也能转向）")]
     public float minTurnSpeedFactor = 0.3f;
 
+    /// <summary>
+    /// 还未接入websocket进行读取处理，用于决定是够绘制倒车线，接入后删掉这条标记
+    /// </summary>
+    public bool DrawLines=true;
+
+    public ParkCarLine carLine;
+
+
     void Update()
     {
         if (useExternalSpeed)
@@ -48,6 +56,10 @@ public class CarWASDControl : MonoBehaviour
         else
         {
             UpdateKeyboardDrive();
+        }
+        if(!DrawLines)
+        {
+            carLine.DisDraw();
         }
     }
 
@@ -78,6 +90,10 @@ public class CarWASDControl : MonoBehaviour
         {
             transform.Rotate(Vector3.up, turnAmount, Space.Self);
         }
+        if (DrawLines)
+        {
+            carLine.DrawLine(transform,turnAmount);
+        }
     }
 
     /// <summary>
@@ -95,6 +111,10 @@ public class CarWASDControl : MonoBehaviour
         // 左右转向：绕Y轴旋转
         transform.Rotate(Vector3.up * horizontal * turnSpeed * Time.deltaTime);
 
+        if (DrawLines)
+        {
+            carLine.DrawLine(transform,turnSpeed* horizontal);
+        }
         // 同步 currentSpeedKmh（方便 GetCurrentSpeedKmh 读取）
         currentSpeedKmh = vertical * moveSpeed * 3.6f;
     }
