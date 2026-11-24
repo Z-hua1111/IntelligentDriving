@@ -112,4 +112,18 @@ namespace HMI.Protocol
         public string valueType;
         public bool isState;
     }
+    /// <summary>
+    /// 路面信息
+    /// </summary>
+    [System.Serializable]
+    public class RoadClass
+    {
+        public double xPos;
+        public double yPos;
+        public double zPos;
+        public double perWidth;
+        public double rot;//正为向右，负为向左
+        public double laneCount;
+    }
+
 }

@@ -116,7 +116,7 @@ public class ParkCarLine : MonoBehaviour
     {
         if (CarTra == null || LinePer == null) return;
         if(!enable)enable = true;
-        Debug.Log(rotateFactor);
+        rotateFactor=-rotateFactor;
         int wantDash = Mathf.Max(1, dashCount);
         int wantSub = Mathf.Max(1, subdivision);
         if (AllLine == null

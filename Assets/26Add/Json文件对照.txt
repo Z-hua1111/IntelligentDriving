@@ -1,0 +1,12 @@
+Signal
+{
+	string name;
+	string value;
+	string valuetype;
+	bool isState
+}
+Snapshot
+{
+	
+
+}

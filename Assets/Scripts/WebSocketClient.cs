@@ -23,6 +23,7 @@ namespace HMI.Communication
         public ObstacleVisualEnhancer visualEnhancer;
         public LaneLineManager laneLineManager;
         public CarWASDControl carController;
+        public RoadRenderManager roadRenderManager;
 
         private ClientWebSocket websocket;
         private CancellationTokenSource cts;
@@ -316,6 +317,8 @@ namespace HMI.Communication
                     case "hmi.web.signal": HandleSignal(payload); break;
                     case "web.data.snapshot": HandleSnapshot(payload); break;
                     case "auto.request": HandleAutoRequest(payload); break;
+                    //26 Add
+                    case "road.info":HandleRoadInfo(payload); break;
                     default:
                         Debug.Log($"[WebSocket] 收到未处理类型: {type}");
                         break;
@@ -331,6 +334,13 @@ namespace HMI.Communication
         /// <summary>
         /// 处理 Android 发来的自动请求控制消息
         /// </summary>
+        private void HandleRoadInfo(JObject payload)
+        {
+            if(payload==null)return;
+
+            //RoadClass temp=new RoadClass;
+            //roadRenderManager.SetInfo();
+        }
         private void HandleAutoRequest(JObject payload)
         {
             if (payload == null) return;

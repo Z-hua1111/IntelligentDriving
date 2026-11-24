@@ -64,10 +64,12 @@
     <Compile Include="Assets\Scripts\RenderFunction\SceneSwitchController.cs" />
     <Compile Include="Assets\Scripts\ObstacleManager.cs" />
     <Compile Include="Assets\Scripts\ViewSwitchController.cs" />
+    <Compile Include="Assets\26Add\RoadClass.cs" />
     <Compile Include="Assets\Scripts\WebSocketProtocol.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\ParkingVisualManager.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\ObstacleBoundingBox.cs" />
     <Compile Include="Assets\Scripts\ObstacleVisualEnhancer.cs" />
+    <Compile Include="Assets\26Add\RoadRenderManager.cs" />
     <Compile Include="Assets\26Add\ParkCarLine.cs" />
     <Compile Include="Assets\Scripts\InfineRoad.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\AutoObstacleRequester.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\Scripts\CarWASDControl.cs" />
     <Compile Include="Assets\Scripts\RenderFunction\AutoParkingController.cs" />
     <Compile Include="Assets\Scripts\WebSocketClient.cs" />
+    <Compile Include="Assets\26Add\TestValueSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -98,6 +101,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\26Add\Json文件对照.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

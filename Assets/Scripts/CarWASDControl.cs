@@ -109,7 +109,7 @@ public class CarWASDControl : MonoBehaviour
         transform.Translate(Vector3.forward * vertical * moveSpeed * Time.deltaTime, Space.Self);
 
         // 左右转向：绕Y轴旋转
-        transform.Rotate(Vector3.up * horizontal * turnSpeed * Time.deltaTime);
+        transform.Rotate( vertical*Vector3.up * horizontal * turnSpeed * Time.deltaTime);
 
         if (DrawLines)
         {
