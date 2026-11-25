@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4565821837236811976, guid: 79fac9e26a1cbf541b5abc23b2139c1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -508,6 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865425645}
   - component: {fileID: 865425646}
+  - component: {fileID: 865425647}
   m_Layer: 0
   m_Name: PlantManager
   m_TagString: Untagged
@@ -539,7 +544,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865425644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab8b51e55ed179e4fa97b6e5dfdcf364, type: 3}
   m_Name: 
@@ -547,6 +552,36 @@ MonoBehaviour:
   CarTransForm: {fileID: 154881990}
   frontRoad: {fileID: 1878051810}
   backRoad: {fileID: 238769971}
+--- !u!114 &865425647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865425644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10ffa0eae32e644f8cbd07630b17b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cartransform: {fileID: 154881990}
+  forwardDistance: 150
+  backDistance: 30
+  refreshStep: 4
+  usePosRotatesAsHeading: 1
+  lineWidth: 0.12
+  doubleLineGap: 0.22
+  dashLength: 3
+  gapLength: 3
+  lineHeight: 0.02
+  leftEdgeType: 0
+  uvScale: 0.25
+  roadMaterial: {fileID: 2100000, guid: 4bed83ecfb6452744811a6c25465b815, type: 2}
+  lineMaterial: {fileID: 2100000, guid: d76d9aff24ed4ce46ba4121ab19f71f3, type: 2}
+  centerLineMaterial: {fileID: 2100000, guid: d76d9aff24ed4ce46ba4121ab19f71f3, type: 2}
+  simLaneWidth: 3.5
+  simStep: 5
+  simExtendMargin: 20
 --- !u!1001 &887603038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1086,51 +1121,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1662807460
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1662807462}
-  - component: {fileID: 1662807461}
-  m_Layer: 0
-  m_Name: RoadRender
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1662807461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662807460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f10ffa0eae32e644f8cbd07630b17b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RoadMesh: {fileID: 0}
---- !u!4 &1662807462
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662807460}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1878051810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 59784086777871333, guid: 79fac9e26a1cbf541b5abc23b2139c1a, type: 3}
@@ -1187,6 +1177,10 @@ PrefabInstance:
     - target: {fileID: 4565821837236811976, guid: 79fac9e26a1cbf541b5abc23b2139c1a, type: 3}
       propertyPath: m_Name
       value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565821837236811976, guid: 79fac9e26a1cbf541b5abc23b2139c1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1308,4 +1302,3 @@ SceneRoots:
   - {fileID: 1086828749}
   - {fileID: 1518433408}
   - {fileID: 1177632461}
-  - {fileID: 1662807462}
